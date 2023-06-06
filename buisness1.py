@@ -46,7 +46,7 @@ def Event():
     os.system('Cls')
     if money > 0:
         charge = float()
-        charge = random.choice([0.2 * money,0,25 * money,0.15*money,0.5*money,0.6*money,0.4*money,0.7*money,0.02 * money,0.05*money,0.09*money])
+        charge = random.choice([0.2 * money,0.25 * money,0.15*money,0.5*money,0.3*money,0.4*money,0.35*money,0.02 * money,0.05*money,0.09*money])
         text1 = "placisz mandat wynoszacy :" + str(charge)
         text2 = "zrobiles wspaniale zakupy,placisz " + str(charge)
         text3 = "za przejazd placisz " + str(charge)
@@ -66,7 +66,7 @@ def Event():
             print(text9)
             time.sleep(2)
             Play()
-        elif textt == text1 or textt == text2 or textt == text3 or textt == text4 or textt == text5:
+        elif textt == text1 or textt == text2 or textt == text3 or textt == text4 or textt == text5 or textt == text6:
             print(textt)
             money -= charge
             time.sleep(2)
@@ -257,8 +257,8 @@ def Sell():
     print("            ░╚═══██╗██╔══██║██║░░░░░██╔══╝░░")
     print("            ██████╔╝██║░░██║███████╗███████╗")
     print("            ╚═════╝░╚═╝░░╚═╝╚══════╝╚══════╝")
-    print("money -- "+str(money))
-    print("bank -- "+str(bankacc))
+    print("money -- "+str(round(money)))
+    print("bank -- "+str(round(bankacc)))
     print("                         [1]DLUGOPIS                      CENA -- "+str(round(pricessell["penP"],2))+"                ")
     print("                         [2]USB                           CENA -- "+str(round(pricessell["usbP"],2))+"                ")
     print("                         [3]DYSK                          CENA -- "+str(round(pricessell["harddriveP"],2))+"                ")
